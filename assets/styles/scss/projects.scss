@@ -1,0 +1,73 @@
+#projects {
+    .preview {
+        position: relative;
+        margin: 0 auto;
+        max-width: 1440px;
+        display: flex;
+
+        &:before {
+            content: "";
+            background: linear-gradient(-15deg, #00946f 0%, #001510 85%);
+            width: 100%;
+            height: 80%;
+            position: absolute;
+            z-index:-1;
+            border-radius: 20px;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        .info {
+            z-index:1;
+            padding-top: calc(10% + 20px);
+            width: 100%;
+            order: 1;
+            padding-right: 80px;
+
+            .button {
+                position: relative;
+                transition: all 300ms;
+                
+                &:before {
+                    content: "";
+                    position: absolute;
+                    right: calc(100% - 30px);
+                    top: 50%;
+                    height: 1px;
+                    background:white;
+                    width: 140px;
+                    opacity:0;
+                    visibility: hidden;
+                    transition: all 300ms;
+                }
+                &:after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    position: absolute;
+                    right: calc(100% + 110px);
+                    border:solid 1px white;
+                    border-radius: 50%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 300ms;
+                }
+
+                &:hover {
+                    padding-left: 60px;
+
+                    &:before, &:after {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        .mockup {
+            z-index: 0;
+            padding: 0 80px;
+        }
+    }
+}
