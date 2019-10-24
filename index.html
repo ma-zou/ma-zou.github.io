@@ -22,19 +22,18 @@
     </header>
     <main>
         <div id="about">
-            <!-- <h1>Hi, my name is Malte 🖐</h1>
-            <p>I'm a webdeveloper, based in Duesseldorf Germany.</p>
-            <p>Since 2014 I'm creating websites, starting with the concept, creating design, working my way to the best possible websolution. Check some of my <a href="" title="Projects">Sideprojects below</a>.</p>
-            <h2>Development Skills</h2>
-            <ul>
-                <li>HTML 100/100</li>
-                <li>CSS 100/100</li>
-                <li>JS 90/100</li>
-                <li>PHP 55/100</li>
-                <li>NodeJS 70/100</li>
-                <li>MySQL 40/100</li>
-                <li>MongoDB 30/100</li>
-            </ul> -->
+            <div class="row">
+                <div class="col">
+                    <img src="/assets/images/me.jpg" alt="That's me ;)">
+                </div>
+                <div class="col">
+                    <h2>Lorem ipsum dolor sit amet consectetur <br><span class="sub">Velit nihil, exercitationem</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nihil, exercitationem repudiandae saepe reprehenderit
+                        iure suscipit quasi, vel rem, quia optio dicta excepturi! Magnam nesciunt a eius ipsa dolorum earum?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nihil, exercitationem repudiandae saepe reprehenderit
+                        iure suscipit quasi, vel rem, quia optio dicta excepturi! Magnam nesciunt a eius ipsa dolorum earum?</p>
+                </div>
+            </div>
         </div>
         <div id="projects">
             <div class="preview">
@@ -63,6 +62,7 @@
                             </div>
                             <div class="screen">
                                 <div id="app">
+                                    <iframe src="/projects-sample/musikplayer/" frameborder="0"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -72,17 +72,25 @@
         </div>
         <div id="getInTouch">
             <form action="">
-                <fieldset>
+                <div class="fieldset">
                     <div class="input">
-                        <input type="text" name="name" id="name" placeholder="please enter your name">
+                        <input type="text" name="name" id="name" placeholder="your name">
                         <label for="name"><i class="icon-user"></i></label>
                     </div>
                     <div class="input">
-                        <input type="email" name="email" id="email" placeholder="please enter your email">
+                        <input type="email" name="email" id="email" placeholder="your email">
                         <label for="email"><i class="icon-mail"></i></label>
                     </div>
-                </fieldset>
-                <fieldset>
+                    <div class="input">
+                        <input type="text" name="budget" id="budget" placeholder="estimated budget">
+                        <label for="budget"><i class="icon-dollar-sign"></i></label>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="address" id="address" placeholder="current website address">
+                        <label for="address"><i class="icon-globe"></i></label>
+                    </div>
+                </div>
+                <div class="fieldset">
                     <div class="checkboxes">
                         <div class="checkbox">
                             <input type="checkbox" name="design" id="design">
@@ -101,11 +109,15 @@
                             <label for="cms"></label>
                         </div>
                     </div>
+                </div>
+                <div class="fieldset">
                     <div class="textarea">
                         <textarea name="message" id="message" cols="30" rows="10" placeholder="Describe your project in a few words..."></textarea>
                     </div>
-                </fieldset>
-                <button type="submit">Send Message <i class="icon-send"></i></button>
+                </div>
+                <div class="fieldset">
+                    <button type="submit">Send Message</button>
+                </div>
             </form>
         </div>
     </main>

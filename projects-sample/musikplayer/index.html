@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Musicplayer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="song-data" class="paused">
+
+        </div>
+        <div class="playstate">
+            <span id="time-played"></span>
+            <div class="timeline">
+                <svg>
+                    <path stroke-width="3" stroke-linecap="round" id="waveform" d="" />
+                </svg>
+                <svg id="controller">
+                    <path stroke-width="3" stroke-linecap="round" d="" />
+                </svg>
+            </div>
+            <span id="time-length"></span>
+        </div>
+        <div class="controls">
+            <button id="repeat">
+                <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path d="M19.8333 1.16666L24.5 5.83332L19.8333 10.5" stroke="#D9D9D9" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M3.5 12.8333V10.5C3.5 9.26233 3.99167 8.07535 4.86683 7.20018C5.742 6.32501 6.92899 5.83334 8.16667 5.83334H24.5"
+                            stroke="#D9D9D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8.16667 26.8333L3.5 22.1667L8.16667 17.5" stroke="#D9D9D9" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M24.5 15.1667V17.5C24.5 18.7377 24.0083 19.9247 23.1332 20.7998C22.258 21.675 21.071 22.1667 19.8333 22.1667H3.5"
+                            stroke="#D9D9D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="28" height="28" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+            <button id="previous">
+                <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.1667 23.3333L10.5 14L22.1667 4.66666V23.3333Z" fill="#515151" stroke="#515151"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.83334 22.1667V5.83334" stroke="#515151" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+
+            </button>
+            <button id="play-pause">
+                <svg width="50" height="50" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M30 55C43.8071 55 55 43.8071 55 30C55 16.1929 43.8071 5 30 5C16.1929 5 5 16.1929 5 30C5 43.8071 16.1929 55 30 55Z"
+                        stroke="#0AB4A9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M25 20L40 30L25 40V20Z" stroke="#0AB4A9" fill="#0AB4A9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button id="next">
+                <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.83333 4.66666L17.5 14L5.83333 23.3333V4.66666Z" fill="#515151" stroke="#515151"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M22.1667 5.83334V22.1667" stroke="#515151" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+
+            </button>
+            <button id="volume">
+                <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.8333 5.83334L7 10.5H2.33334V17.5H7L12.8333 22.1667V5.83334Z" fill="#515151"
+                        stroke="#515151" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M22.2483 5.75168C24.4355 7.9395 25.6642 10.9064 25.6642 14C25.6642 17.0936 24.4355 20.0605 22.2483 22.2483M18.13 9.87001C19.2236 10.9639 19.8379 12.4474 19.8379 13.9942C19.8379 15.541 19.2236 17.0244 18.13 18.1183"
+                        stroke="#515151" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,28 +1,40 @@
 #projects {
     .preview {
         position: relative;
-        margin: 0 auto;
+        margin: 0 auto 100px auto;
         max-width: 1440px;
         display: flex;
+        flex-flow:row wrap;
 
         &:before {
             content: "";
             background: linear-gradient(-15deg, #00946f 0%, #001510 85%);
             width: 100%;
-            height: 80%;
+            height: calc(100% - 80px);
             position: absolute;
             z-index:-1;
             border-radius: 20px;
-            top:50%;
+            top:calc(50% + 40px);
             left:50%;
             transform: translate(-50%, -50%);
+
+            @include breakpoint(giant) {
+                top: 50%;
+            }
         }
         .info {
             z-index:1;
             padding-top: calc(10% + 20px);
             width: 100%;
             order: 1;
-            padding-right: 80px;
+            padding: 0 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            
+            @include breakpoint(giant) {
+                padding: 40px 100px 40px 0;
+                width: calc(100% - 500px);
+            }
 
             .button {
                 position: relative;
@@ -56,18 +68,33 @@
                 }
 
                 &:hover {
-                    padding-left: 60px;
-
-                    &:before, &:after {
-                        opacity: 1;
-                        visibility: visible;
+                    @include breakpoint(medium) {
+                        padding-left: 60px;
+    
+                        &:before, &:after {
+                            opacity: 1;
+                            visibility: visible;
+                        }
                     }
                 }
             }
         }
         .mockup {
             z-index: 0;
-            padding: 0 80px;
+            margin:0 auto;
+            @include breakpoint(giant) {
+                padding: 0 100px;
+            }
+
+            #app {
+                width: 100%;
+                height: 100%;
+            }
+
+            iframe {
+                width: 292px;
+                height: 582px;
+            }
         }
     }
 }
