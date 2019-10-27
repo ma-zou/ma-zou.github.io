@@ -12,6 +12,10 @@ body {
 	color: rgba(255,255,255,1);
 	font-family: $main-font;
 	overflow-x: hidden;
+
+	&.navOpen {
+		overflow-y:hidden;
+	}
 }
 
 p {
@@ -94,7 +98,7 @@ img {
 	}
 }
 
-button, .button {
+button:not(.basic), .button {
 	color: white;
 	font-size: 14px;
 	background: rgba(#001510,1);
@@ -115,28 +119,95 @@ button, .button {
 }
 
 header {
-	nav {
-		position: absolute;
+	.topbar {
+		height: 50px;
+		background: black;
+		position: fixed;
+		z-index:50;
 		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0 20px;
+
+		button {
+			background: none;
+			border: none;
+			color: white;
+			position: relative;
+			font-weight: 800;
+			transition: all 300ms;
+			letter-spacing: 4px;
+			outline:none;
+			cursor: url(/assets/images/dot.png), auto;
+
+			
+			span {
+				position: relative;
+				z-index: 1;
+				pointer-events: none;
+				&.front {
+					position: relative;
+					z-index: 3;
+				}
+			}
+
+			&:before {
+				content: "";
+				background: white;
+				width: 0;
+				height: 1px;
+				display:block;
+				position: absolute;
+				left:-20px;
+				transition: all 150ms ease-out;
+				top: 50%;
+				z-index: 2;
+			}
+
+			body.navOpen & {
+				&:before {
+					width: 100vw;
+				}
+			}
+
+			&:hover {
+				color: #00bf8f;
+			}
+		}
+	}
+	nav {
+		z-index: 50;
+		position: fixed;
+		width: 100%;
+		background:black;
+		transform: translateX(-100%);
+		transition: all 300ms;
 		left:0;
-		top:0;
+		bottom: 0;
+		top:50px;
+
+		body.navOpen & {
+			transform: translateX(0);
+		}
 
 		ul {
 			display:flex;
 			justify-content: center;
 			list-style: none;
+			flex-flow: column nowrap;
 
 			li {
 				a {
 					padding: 20px;
 					color: white;
-					display:block;
+					display:inline-block;
 					text-decoration: none;
 					font-weight: 400;
 					font-size: 14px;
 					text-transform: uppercase;
 					letter-spacing: 4px;
 					transition: all 300ms;
+					cursor: url(/assets/images/dot.png), auto;
 				}
 
 				&:hover {

@@ -1,11 +1,15 @@
 window.onload = () => {
-    let inputs = document.querySelectorAll('input');
+    let inputs = document.querySelectorAll('input'),
+        navToggler = document.getElementById('navToggle');
+
+    navToggler.addEventListener('click', () => {document.body.classList.toggle('navOpen')});
 
     inputs.forEach((item) => {
         item.addEventListener('change', validate_form);
     })
 
     window.addEventListener('mousemove', fancy_cursor);
+
 }
 
 function fancy_cursor(e) {
