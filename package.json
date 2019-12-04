@@ -1,0 +1,24 @@
+{
+  "name": "ma-zou.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ma-zou/ma-zou.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-stylus": "^2.7.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ma-zou/ma-zou.github.io/issues"
+  },
+  "homepage": "https://github.com/ma-zou/ma-zou.github.io#readme"
+}

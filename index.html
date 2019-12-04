@@ -5,46 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/styles/main.css" />
-	<script src="/assets/scripts/main.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="/assets/styles/main.css" />
+	<script src="/assets/scripts/main.js"></script> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/styles/main.css" />
+	<script src="assets/scripts/main.js"></script>
 </head>
 <body>
     <header>
         <div class="topbar">
-            <button class="basic" id="navToggle"><span class="front">M</span><span>E</span><span class="front">N</span><span>U</span></button>
+            <button class="basic" id="navToggle">Menu</button>
+
+            <ul class="social">
+                <li><a href="">a</a></li>
+                <li><a href="">b</a></li>
+                <li><a href="">c</a></li>
+                <li><a href="">d</a></li>
+                <li><a href="">e</a></li>
+            </ul>
         </div>
         <nav>
             <ul>
-                <li><a class="navLink" href="" title="">Home</a></li>
-                <li><a class="navLink" href="" title="">About</a></li>
-                <li><a class="navLink" href="" title="">Projects</a></li>
-                <li><a class="navLink" href="" title="">Get in touch</a></li>
+                <li>
+                    <a class="navLink" href="" title="">Home</a>
+                </li>
+                <li>
+                    <a class="navLink" href="" title="">About</a>
+                </li>
+                <li>
+                    <a class="navLink" href="" title="">Skills</a>
+                </li>
+                <li>
+                    <a class="navLink" href="" title="">Projects</a>
+                </li>
+                <li>
+                    <a class="navLink" href="" title="">Timeline</a>
+                </li>
+                <li>
+                    <a class="navLink" href="" title="">Contact</a>
+                </li>
             </ul>
         </nav>
-        <canvas></canvas>
+        <div class="claim">
+            <h1>
+                <span>lorem ipsumdo</span><br>
+                <small>
+                    <span>Developer</span>
+                    <span>Developing</span>
+                    <span>Developments</span>
+                    <span>...</span>
+                    <span>Or doing some design</span>
+                </small>
+            </h1>
+            
+            <canvas></canvas>
+        </div>
     </header>
     <main>
         <div id="about">
             <div class="row">
                 <div class="col">
-                    <img src="/assets/images/me.jpg" alt="That's me ;)">
+                    <h2>Who’s the guy behind this name?</h2>
+                    <h3>You read till here, so atleast you thought my name is interesting.</h3>
+                    <p>Hi, I’m Malte. 25 years old from Düsseldorf Germany.</p>
+                    <p>I’m working as a “<a href="">Technical Director</a>” and <a href="">Instructor</a> at Euroweb. Here I work at all the greate website you visited. Maybe your Baker, Craftsman or closest Cinemary, layed on my table before. <br>Created from Scratsh, responsive, fast and customized to your needs.</p>
+                    <p>Beside creating stuff for the web, I’m heavyly involved in training around 8-15 newcomming webdesigners per year.</p>
+                    <p>The rest of my time i fill with variaties of hobbies, like tinkering around with new web technologies (<a href="">see below</a>), doing sports like rockclimbing or drinking some good old black coffee.</p>
                 </div>
                 <div class="col">
-                    <h2>Lorem ipsum dolor sit amet consectetur <br><span class="sub">Velit nihil, exercitationem</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nihil, exercitationem repudiandae saepe reprehenderit
-                        iure suscipit quasi, vel rem, quia optio dicta excepturi! Magnam nesciunt a eius ipsa dolorum earum?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nihil, exercitationem repudiandae saepe reprehenderit
-                        iure suscipit quasi, vel rem, quia optio dicta excepturi! Magnam nesciunt a eius ipsa dolorum earum?</p>
+                    <!-- <img src="/assets/images/me.jpg" alt="That's me ;)"> -->
                 </div>
             </div>
         </div>
         <div id="projects">
             <div class="preview">
-                <div class="info">
+                <div class="col info">
                     <h2>Lorem ipsum dolor sit amet consectetur <br><span class="sub">Velit nihil, exercitationem</span></h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nihil, exercitationem repudiandae saepe reprehenderit iure suscipit quasi, vel rem, quia optio dicta excepturi! Magnam nesciunt a eius ipsa dolorum earum?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nihil, exercitationem repudiandae saepe reprehenderit iure suscipit quasi, vel rem, quia optio dicta excepturi! Magnam nesciunt a eius ipsa dolorum earum?</p>
-                    <a href="#project" class="button" title="View Project">View Project</a>
+                    <a href="#project" class="btn" title="View Project">View Project</a>
                 </div>
                 <div class="mockup">
                     <div class="base">
@@ -65,7 +103,7 @@
                             </div>
                             <div class="screen">
                                 <div id="app">
-                                    <iframe src="/projects-sample/musikplayer/" frameborder="0"></iframe>
+                                    <!-- <iframe src="/projects-sample/musikplayer/" frameborder="0"></iframe> -->
                                 </div>
                             </div>
                         </div>
