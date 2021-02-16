@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAA,EACC,SACA,UACA,qBAAqB,CACrB,KAGA,gBAAiB,CACjB","file":"../scss/styles.css","sourcesContent":["* {\n\tmargin:0;\n\tpadding:0;\n\tbox-sizing:border-box;\n}\n\nbody {\n\tbackground: black;\n}"]}
